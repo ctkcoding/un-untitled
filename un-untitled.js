@@ -67,7 +67,7 @@ function add_new_title() {
   var dash = window_title.innerHTML.indexOf('—')
   title_end = window_title.innerHTML.substr(dash)
   un_observer.disconnect()
-  window_title.innerHTML = active + ' ' + title_end
+  window_title.innerHTML = active
   un_observer.observe(window_title, {childList: true})
   var status_bar = document.getElementsByTagName('status-bar-file')[0]
   if (!status_bar.getElementsByClassName('new_path').length) {
