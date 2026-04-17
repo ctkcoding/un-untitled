@@ -7,7 +7,9 @@ styler.innerHTML = `
 document.head.appendChild(styler)
 module.exports = {
   activate() {
+  setTimeout(() => {
     window_title = document.head.getElementsByTagName('title')[0]
+    
     function callback(mutationsList, un_observer) {
       for (var mutation of mutationsList) {currently()}
     }
@@ -26,6 +28,8 @@ module.exports = {
     return_to.click()
 
     currently()
+  }, 30);
+
   },
   deactivate() {
     un_observer.disconnect()
